@@ -31,7 +31,6 @@ def draw_button(screen, text, rect, color="white", hover_color="gray"):
     screen.blit(text_surface, text_rect)
 
 def load_high_scores():
-    """Load high scores from CSV file"""
     scores = []
     try:
         if os.path.exists('high_scores.csv'):
@@ -107,7 +106,7 @@ def main():
     game_objects = None
     dt = 0
     game_time = 0  # Store final game time
-    player_name = ""  # For high score entry
+    player_name = None  # For high score entry
     
     welcome_asteroids = []
     for _ in range(5):
